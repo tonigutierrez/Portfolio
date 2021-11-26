@@ -33,7 +33,7 @@ body {
     border: 2px solid #3333332f;
     border-radius: 50%;
     transition-duration: 0.2s;
-    transition-timing-function: ease-in-out;
+    transition-timing-function:ease-in-out;
     transition-property: background-color, color;
   }
   
@@ -114,7 +114,6 @@ header{
 .main{
     width: 90%;
     margin:auto;
-    height:100vh;
 }
 
 
@@ -122,6 +121,7 @@ header{
     width: 60%;
     margin: auto;
     padding-top: 120px;
+    padding-bottom: 120px;
     display: flex;
     align-items: center;
     text-align:center;
@@ -139,7 +139,6 @@ header{
     color: var(--color-par);
     font-size:20px;
     margin-top: 20px;
-
 }
 
 .main_cv{
@@ -170,7 +169,6 @@ header{
 
 .main_habilidades{
     background-color:rgb(231, 231, 231);
-    height:100vh;
     align-items: center;
     padding-top: 50px;
 }
@@ -187,6 +185,10 @@ header{
 .tamanio{
     text-align: center;
     margin-bottom: 70px;
+}
+
+.tamanio img{
+    width:300px;
 }
 
 /* PENDIENTE DE TERMINAR */
@@ -206,7 +208,7 @@ header{
 /* SERVICIOS */
 
 .main_services_world{
-    height:100vh;
+    padding: 200px 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -276,7 +278,6 @@ header{
 .main_portafolio{
     width:90%;
     margin: auto;
-    height:100vh;
     display: flex;
     flex-direction: column;
     justify-content:space-between;
@@ -298,7 +299,7 @@ header{
 
 .main_projects figure{
     width: 30%;
-    height: 40%;
+    height: 250px;
     position: relative;
     align-items: center;
     overflow: hidden;
@@ -332,7 +333,7 @@ header{
 }
 
 .main_projects figure .proj_text p{
-    transform: translate(110%);
+    transform: translate(120%);
 }
 
 .main_projects figure .proj_text h3{
@@ -357,7 +358,7 @@ header{
 footer{
     width: 100%;
     margin:auto;
-    height: 50vh;
+    padding-bottom: 50px;
     padding-top: 50px;
     text-align: center;
 }
@@ -383,6 +384,7 @@ footer h2{
     transition:.5s;
     filter: brightness(80%);
 }
+
 
 @media (max-width:800px){
 
@@ -422,11 +424,6 @@ footer h2{
         font-weight:600;
     }
     
-    .main{
-        height:70vh;
-    }
-    
-    
     .main_about{
         width: 100%;
         padding-top: 90px;
@@ -438,7 +435,6 @@ footer h2{
     }
 
     .main_habilidades{
-        height:50vh;
         margin-top: 50px;
     }
     
@@ -450,15 +446,19 @@ footer h2{
     .tamanio{
         margin-bottom: 40px;
     }
+
     
+    .tamanio img{
+    width:200px;
+    margin-bottom: 40px;
+    }
 
     .main_services{
     margin-top: 60px;
     }
 
     .main_services_world{
-        height:100vh;
-        margin-bottom: 80px;
+        padding: 0px 0px;
     }
     
     .services_icons{
@@ -468,8 +468,8 @@ footer h2{
     }
 
     .main_portafolio{
-        height:130vh;
-        margin-top: 120px;
+        margin-top:50px;
+        margin-bottom: 0px;
     }
     
     
@@ -503,10 +503,5 @@ footer h2{
         transform: translate(0%);
     }
 
-
-
-    footer{
-        padding-top:150px;
-    }
-    
 }
+

@@ -50,8 +50,8 @@ header{
     background-image: linear-gradient(135deg, #000000e3 0%, #000000dc 100%), url(img/technology-1283624_1280.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height:100vh;
     margin-top:0;
+    padding-bottom: 200px;
 }
 
 .header_nav ul {
@@ -388,8 +388,11 @@ footer h2{
 
 @media (max-width:800px){
 
+    header{
+        padding-bottom: 100px;
+    }
+    
     .header_nav ul {
-        height:40vh;
         display:flex;
         flex-direction: column;
         align-items: center;
@@ -422,6 +425,25 @@ footer h2{
     
     .header_title{
         font-weight:600;
+    }
+    
+
+    .header_subtitle{
+        color: var(--color-subtitle);
+        font-size:20px;
+        font-weight:300;
+    }
+    
+    .header_title{
+        color: var(--color-title);
+        font-size:30px;
+        font-weight:600;
+    }
+    
+    .header_perfil{
+        width: 150px;
+        height: 150px;
+        border-radius:50%;
     }
     
     .main_about{

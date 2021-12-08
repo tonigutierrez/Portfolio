@@ -22,7 +22,7 @@ $(document).ready(function() {
         }, 300)
     });
     $(window).scroll(function() {
-        if($(this).scrollTop()> 300){
+        if($(this).scrollTop()> 0){
             $('.gotop').slideDown(300);
         }else{
             $('.gotop').slideUp(300);

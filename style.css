@@ -10,14 +10,27 @@ body {
 
 :root{
     --color-title:#096386;
-    --color-nav:#575864;
+    --color-nav:#c4c4c4;
     --color-nav-hover:#35373e;
     --color-par:#090934;
     --color-subtitle:#fff;
 }
-
 /* Boton ir al cielo */
 
+.gotop{
+    display: none;
+    width:50px;
+    position:fixed;
+    bottom:10px;
+    right:10px;
+    z-index: 1;
+}
+
+.gotop img{
+    width:100%;
+    cursor: pointer;
+    opacity:50%;
+}
   
 /* Header */ 
 
@@ -96,7 +109,7 @@ header{
 .main_about{
     width: 60%;
     margin: auto;
-    padding-top: 120px;
+    padding: 120px 0;
     display: flex;
     align-items: center;
     text-align:center;
@@ -142,10 +155,31 @@ header{
     color: white;
 }
 
+/* HABILIDADES */
+
+.carousel{
+    background-color: rgb(219, 218, 218);
+    margin-top:50px;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.carousel-item img{
+    width: 300px;
+    height: 300px;
+    margin-bottom: 100px;
+}
+
+.carousel-item h5{
+    color: rgb(34, 34, 34);
+    font-size:30px
+}
+
 /* SERVICIOS */
 
 .main_services_world{
-    padding: 100px 0px;
+    padding-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -184,40 +218,6 @@ header{
     margin-bottom: 30px;
 }
 
-/*HABILIDADES*/
-
-.main_habilidades{
-    background-color: var(--color-title);
-    padding-top: 50px;
-    padding-bottom: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-}
-
-.hab_img{
-    width: 90%;
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 50px;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.hab_img img{
-    background-color:rgba(221, 221, 221, 0.726);
-    width: 120px;
-    border-radius:20px;
-    box-shadow: 0px 3px 10px rgba(0,0,0,0.5);
-    cursor: pointer;
-}
-
-.hab_img img:hover{
-    filter: brightness(80%);
-    transform:scale(1.06);
-    transition:.5s;
-}
 
 /* Proyectos */
 .main_portafolio{
@@ -226,12 +226,12 @@ header{
     display: flex;
     flex-direction: column;
     align-items:center;
-    padding-top:100px;
+    padding:110px 0;
 }
 
 .main_portafolio h2{
     font-size:35px;
-    margin-bottom: 30px;
+    margin-bottom:80px;
 }
 
 .main_projects{
@@ -242,7 +242,7 @@ header{
 }
 
 .main_projects figure{
-    width: 45%;
+    width: 30%;
     height: 250px;
     position: relative;
     align-items: center;
@@ -301,38 +301,101 @@ header{
 /*Footer */
 
 footer{
+    background-color: var(--color-title);
     width: 100%;
     margin:auto;
-    padding-bottom: 50px;
-    padding-top: 50px;
     text-align: center;
+    padding-bottom: 20px;
 }
 
-footer h2{
-    font-size:35px
+
+.zona_email{
+    width:50%; 
+    margin: auto;
+    color:white;
+    margin-top: 50px;
+}
+.zona_email form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
+.zona_email input{
+    width:100%;
+    border-radius: 20px;
+    padding:5px 20px;
+    border: white solid 2px;
+}
+
+.zona_email textarea{
+    width:100%;
+    border-radius: 20px;
+    padding:5px 20px;
+    border: white solid 2px;
+    max-width: 100%;
+    max-height: 300px;
+    min-height: 300px;
+}
+
+.zona_email button{
+    background-color:rgba(255, 0, 0, 0);
+    border: white solid 1px;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+
+.zona_email button:hover{
+    background-color: #0a7daa;
+    transition: 0.3s;
+}
+
+#sendemail{
+    opacity: 0;
+}
 .footer_icons{
     width:100%;
-    height:60%;
-    display: flex;
+    display:flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items: center;
+    margin-top: 20px;
 }
 
-.footer_icons img{
-    width:50px;
-    padding-top: 30px;
+.footer_icons a{
+    color:white;
+    text-decoration: none;
+    display:inline-block;
+    position: relative;
 }
 
-.footer_icons img:hover{
-    transform: scale(1.1);
-    transition:.5s;
-    filter: brightness(80%);
+.footer_icons a:after{
+    content:'';
+    position: absolute;
+    width:100%;
+    height:2px;
+    bottom:0;
+    left:0;
+    background-color: white;
+    transform:scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
 }
 
+.footer_icons a:hover:after{
+    transform:scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+/* RESPONSIVIDAD */
 
 @media (max-width:800px){
+
+    .gotop{
+        width:30px;
+    }
 
     header{
         padding-bottom: 100px;
@@ -405,21 +468,14 @@ footer h2{
     .main_habilidades{
         margin-top: 50px;
     }
-    
-    .main_skills{
-        margin-bottom: 30px;
-        font-size: 25px;
-    }
-    
-    .tamanio{
-        margin-bottom: 40px;
-    }
 
-    
-    .tamanio img{
-    width:200px;
-    margin-bottom: 40px;
+    .carousel-item img{
+        width: 100;
+        height: 100px;
+        margin-bottom: 50px;
     }
+    
+
 
     .main_services{
     margin-top: 60px;
@@ -469,6 +525,14 @@ footer h2{
     }
     .main_projects figure:hover .proj_text h3{
         transform: translate(0%);
+    }
+
+
+
+    .zona_email{
+        width:90%; 
+        margin: auto;
+        margin-top: 50px;
     }
 
 }

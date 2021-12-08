@@ -15,17 +15,24 @@ function sendEmail(e){
 
 // Boton ir al cielo //////////////////////////////////
 
-$(document).ready(function() {
-    $('.gotop').click(function() {
-        $('body, html').animate({
-            scrollTop: 0
-        }, 300)
-    });
-    $(window).scroll(function() {
-        if($(this).scrollTop()> 300){
-            $('.gotop').slideDown(300);
-        }else{
-            $('.gotop').slideUp(300);
-        }
-    })
-})
+document.getElementById('boton-up').addEventListener('click', scrollUp);
+
+function scrollUp(){
+    var currentScroll = document.documentElement.scrollTop;
+    if (currentScroll > 0){
+        window.scrollTo(0,0);
+    }
+}
+
+var botonUp = document.getElementById('boton-up');
+
+window.onscroll = function(){
+    var scroll = document.documentElement.scrollTop;
+
+    if (scroll > 500){
+        botonUp.style.transform = 'scale(1)';
+    }else{
+        botonUp.style.transform = 'scale(0)';
+    }
+}
+
